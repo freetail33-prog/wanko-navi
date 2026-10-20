@@ -1,0 +1,76 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>愛犬にぴったりのフード・用品診断｜わんこ用品ナビ</title><meta name="description" content="犬種・年齢・体重・悩みを入力するだけで、愛犬に合ったドッグフードやケア用品がわかる無料診断。">
+<link rel="stylesheet" href="assets/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+</head><body>
+<div class="pr-bar">当サイトはアフィリエイト広告（楽天アフィリエイト・Amazonアソシエイト）を利用しています。<a href="privacy.html#ad">詳しく</a></div>
+<header class="site"><div class="in"><a class="logo" href="index.html">🐾 <span>わんこ用品ナビ</span></a>
+<nav class="g"><a href="index.html" class="on">診断</a><a href="deals.html">セール速報</a><a href="privacy.html">ポリシー</a></nav></div></header>
+<main>
+<section class="hero"><h1>30秒でわかる！<br>うちの子にぴったりのフード・用品診断</h1>
+<p>犬種・年齢・体重・気になることを選ぶだけ。3匹の犬と暮らす飼い主が、選び方のポイントと一緒におすすめを紹介します。</p></section>
+
+<section class="card"><h2>🐶 わんちゃんのことを教えてください</h2>
+<form id="f">
+<label for="breed">犬種</label><select id="breed" required></select>
+<div class="row2"><div><label for="age">年齢（歳）</label><input id="age" type="number" min="0" max="25" step="0.5" value="3" inputmode="decimal" required></div>
+<div><label for="weight">体重（kg）</label><input id="weight" type="number" min="0.5" max="90" step="0.1" placeholder="例：4.5" inputmode="decimal"></div></div>
+<label>気になること（いくつでも）</label>
+<div class="chips" id="concerns"></div>
+<button class="btn" style="margin-top:18px">診断する</button>
+</form></section>
+
+<section class="card hidden" id="result"><h2>📋 診断結果 <span class="badge pr">PR</span></h2>
+<div class="summary" id="summary"></div>
+<div id="recs"></div>
+<p class="muted">※ボタンは楽天市場・Amazonの検索結果ページにつながります。ここから購入されると、当サイトに紹介料が入ることがあります（購入する方の価格は変わりません）。</p>
+<div class="note" id="affnote"></div>
+</section>
+
+<section class="card"><h2>🐾 うちの3匹のリアルレビュー</h2>
+<p class="muted">実際にわが家の3匹で試したフードや用品の感想を、順番に載せていく予定です。</p>
+<div class="dogs">
+<div class="dog"><div class="ph">🐕</div><h3>1匹目 <span class="badge soon">準備中</span></h3><p class="muted">名前・犬種・使っているフードのレビューを準備しています。</p></div><div class="dog"><div class="ph">🐕</div><h3>2匹目 <span class="badge soon">準備中</span></h3><p class="muted">名前・犬種・使っているフードのレビューを準備しています。</p></div><div class="dog"><div class="ph">🐕</div><h3>3匹目 <span class="badge soon">準備中</span></h3><p class="muted">名前・犬種・使っているフードのレビューを準備しています。</p></div>
+</div></section>
+
+<section class="card"><h2>🔥 今日の犬用品セール速報</h2><p>ドッグフード・ペットシーツ・おやつの値下げ情報を毎日自動で更新しています。</p><a class="btn sub" href="deals.html">セール速報を見る</a></section>
+<section class="card" id="signup"><h2>📩 セール速報を受け取る</h2>
+<p class="muted">ドッグフードやペットシーツの値下げ情報を、まとめてお届けする予定です。</p>
+<div class="note">⚠️ <b>準備中：</b>配信機能はまだつながっていません。入力した内容はどこにも送信・保存されません。</div>
+<a class="btn" href="#" aria-disabled="true" onclick="alert('LINE公式アカウントは準備中です。');return false;" style="background:#06c755">LINEで受け取る（準備中）</a>
+<form onsubmit="alert('メール配信は準備中です。入力内容は送信されていません。');return false;" style="margin-top:12px">
+<label for="em">メールで受け取る（準備中）</label><input id="em" type="email" placeholder="you@example.com" autocomplete="off">
+<button class="btn sub" style="margin-top:10px">登録する（準備中）</button></form></section>
+</main>
+<footer class="site"><p><a href="privacy.html#ad">広告について</a><a href="privacy.html#privacy">プライバシーポリシー</a><a href="privacy.html#disclaimer">免責事項</a><a href="#" onclick="alert('楽天ROOMは準備中です。');return false;">楽天ROOMも見る（準備中）</a></p>
+<p>Amazonのアソシエイトとして、わんこ用品ナビは適格販売により収入を得ています。当サイトは楽天アフィリエイトにも参加しています。</p>
+<p>診断結果は一般的な情報にもとづく目安で、獣医師による診断の代わりにはなりません。体調の変化が気になる場合は動物病院にご相談ください。</p>
+<p>© 2026 わんこ用品ナビ</p></footer>
+<script src="assets/config.js"></script><script src="assets/catalog.js"></script><script src="assets/links.js"></script><script src="assets/diagnosis.js"></script>
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  $("#breed").innerHTML = '<option value="">選んでください</option>' + Diagnosis.breeds.map(b=>'<option>'+b+'</option>').join("");
+  $("#concerns").innerHTML = Object.entries(Diagnosis.CONCERN_LABEL).map(([k,v])=>'<label><input type="checkbox" value="'+k+'"><span>'+v+'</span></label>').join("");
+  $("#f").addEventListener("submit", async e => {
+    e.preventDefault();
+    const profile = { breed: $("#breed").value || "その他", age: parseFloat($("#age").value)||0, weight: parseFloat($("#weight").value)||0,
+      concerns: [...document.querySelectorAll("#concerns input:checked")].map(i=>i.value) };
+    const res = await Diagnosis.run(profile);
+    $("#summary").innerHTML = res.summary;
+    $("#recs").innerHTML = res.recs.map(r => { const c = CATALOG[r.id]; if(!c) return "";
+      return '<div class="rec"><h3>'+c.title+'</h3><p class="why">'+(r.reason||c.why)+'</p><div class="links">'+
+      '<a class="btn sm" rel="sponsored noopener" target="_blank" href="'+AffLinks.rakuten(c.keywords)+'">楽天で見る</a>'+
+      '<a class="btn sm sub" rel="sponsored noopener" target="_blank" href="'+AffLinks.amazon(c.keywords)+'">Amazonで見る</a></div></div>'; }).join("");
+    $("#affnote").innerHTML = AffLinks.configured ? "" : "🛠 試作版：アフィリエイトIDがまだ設定されていないため、通常の検索ページにつながります。";
+    $("#affnote").classList.toggle("hidden", AffLinks.configured);
+    $("#result").classList.remove("hidden");
+    $("#result").scrollIntoView({behavior:"smooth"});
+  });
+  // URLパラメータで事前入力（例: ?breed=トイ・プードル&age=8&weight=4&c=tear,joint）
+  const q = new URLSearchParams(location.search);
+  if (q.get("breed")) { $("#breed").value = q.get("breed"); $("#age").value = q.get("age")||3; $("#weight").value = q.get("weight")||"";
+    (q.get("c")||"").split(",").forEach(k => { const i = document.querySelector('#concerns input[value="'+k+'"]'); if (i) i.checked = true; });
+    $("#f").requestSubmit(); }
+})();
+</script></body></html>

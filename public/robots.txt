@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /room-posts.html
+Disallow: /data/
