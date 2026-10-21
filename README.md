@@ -29,3 +29,5 @@ Netlify / Vercel / Cloudflare Pages の場合：ビルドコマンド `node scri
 
 ## 楽天ROOM
 公式の投稿APIがなく自動投稿は規約違反のおそれがあるため、自動化していません。`room-posts.html`（または `data/room-posts.json`）の紹介文をコピーして手動で投稿してください。
+
+公開設定完了: 2026-10-21
